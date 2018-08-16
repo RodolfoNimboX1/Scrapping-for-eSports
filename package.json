@@ -1,0 +1,28 @@
+{
+  "name": "scrapping-for-esports",
+  "version": "1.0.0",
+  "description": "an app that scrapes for e sports news",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RodolfoNimboX1/Scrapping-for-eSports.git"
+  },
+  "author": "Rodolfo Resines",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RodolfoNimboX1/Scrapping-for-eSports/issues"
+  },
+  "homepage": "https://github.com/RodolfoNimboX1/Scrapping-for-eSports#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "mongoose": "^5.2.8",
+    "npm": "^6.4.0",
+    "request": "^2.88.0"
+  }
+}
