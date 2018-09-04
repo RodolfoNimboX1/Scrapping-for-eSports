@@ -4,12 +4,12 @@ var makeDate = require("../scripts/date");
 module.exports = {
     get: function(data, cb) {
         Note.find({
-            headlineId: data._id
+            _headlineId: data._id
         }, cb);
     },
     save: function(data, cb) {
         var newNote = {
-            headlineId: data._id,
+            _headlineId: data._id,
             date: makeDate(),
             noteText: data.noteText
         };

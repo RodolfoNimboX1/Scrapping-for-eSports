@@ -1,11 +1,11 @@
 html {
-    position: relative;
-    min-height: 100%;
-  }
+  position: relative;
+  min-height: 100%;
+}
   
   body {
     margin-bottom: 80px;
-    background-image: url("../images/leaves.png");
+    background: url("/public/assets/images/leaves.png");
   }
   
   .card a:not([href]):not([tabindex]).scrape-new {
@@ -47,7 +47,7 @@ html {
   
   .jumbotron .background-image {
     height: 100%;
-    background-image: url("../images/leaves.png");
+    background-image: url("/public/assets/images/leaves.png");
     background-size: cover;
   }
   

@@ -8,8 +8,11 @@ var PORT = process.env.PORT || 8080;
 var app = express();
 var router = express.Router();
 
+// Routes
+require("./config/routes")(router);
+
 // Use express.static to serve the public folder as a static directory
-app.use(express.static("public"));
+app.use(express.static(__dirname));
 
 // Use Handlebars
 app.engine("handlebars", handlebars({
@@ -29,10 +32,13 @@ var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines
 // Set mongoose to leverage built in JavaScript ES6 Promises
 // Connect to the Mongo DB
 mongoose.Promise = Promise;
-mongoose.connect(MONGODB_URI);
-
-// Routes
-require("./config/routes")(router);
+mongoose.connect(MONGODB_URI, function(err) {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log("mongoose connection is successful");
+  }
+});
 
 // Start the server
 app.listen(PORT, function() {

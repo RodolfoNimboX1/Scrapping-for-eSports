@@ -1,4 +1,3 @@
-/* global bootbox */
 $(document).ready(function() {
     // Getting a reference to the article container div we will be rendering all articles inside of
     var articleContainer = $(".article-container");
@@ -203,7 +202,7 @@ $(document).ready(function() {
     }
   
     function handleArticleClear() {
-      $.get("api/clear")
+      $.get("/api/clear")
         .then(function() {
           articleContainer.empty();
           initPage();
